@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Book Rental System</title>
+
+<style type="text/css">
+@import url("webfonts/Raleway_Bold/stylesheet.css");
+@import url("webfonts/Raleway_Regular/stylesheet.css");
+
+#container {
+	width: 1024px;
+	height: 1000px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: left;
+	margin-left: 100px;
+}
+header {
+	width: 1024px;
+	height: 125px;
+	background-color: #E1D7D4;
+	/* [disabled]color: #FFF6F6; */
+	-webkit-box-shadow: 0px 0px 90px;
+	box-shadow: 0px 0px 90px;
+}
+
+#main {
+	width: 1024px;
+	height: 540px;
+}
+#main #contentone {
+	width: 512px;
+	height: 376px;
+	float: left;
+	padding-top: 98px;
+	padding-left: 72px;
+}
+#main #contenttwo {
+	width: 440px;
+	height: 376px;
+	float: right;
+	color: #874748;
+	font-family: "Raleway Regular";
+}
+#topNAV {
+	width: 1024px;
+	height: 45px;
+
+}
+footer {
+	width: 1024px;
+	height: 100px;
+}
+footer #bottomNAV {
+	width: 1024px;
+	height: 50px;
+}
+h1 {
+	font-family: "Slabo27px Regular";
+	text-align: center;
+	font-size: 4em;
+	color: #874748;
+}
+h2 {
+	margin-top: 0px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	color: #F8F2F2;
+}
+#innermain {
+	width: 1024px;
+	height: 600px;
+	border-radius: 25px;
+	background-color: #E1D7D4;
+}
+hr {
+	width: 440px;
+	height: 0px;
+	background-color: #0393E3;
+}
+#submit {
+	width: 80px;
+	height: 30px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-family: "Raleway Regular";
+}
+body {
+	background-image: url("17845-paper-butterflies-out-of-a-book-1280x800-digital-art-wallpaper (1).jpg");
+	background-size: cover;
+}
+a{
+	color: #FBFBFB;
+	text-decoration: none;
+	background-size: cover;
+}
+
+a.visited{
+color:#205081;
+}
+
+#innermain #contenttwo h2 {
+	color: #874748;
+}
+
+.navmenu a:hover{
+	color: #927D7D;
+}
+</style>
+<link href="webfonts/Slabo27px_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="container">
+<header><h1>Online Book Rental System</span></h1></header>
+<br>
+<nav id="topNAV" class="navmenu"><h2><a href="index.php">Home</a> <a href="aboutus.php">About us </a> <a href="admin.php"> Admin </a></h2></nav> <!--end of topNAV-->
+<div id="main">
+<div id="innermain">
+<div id="contentone"> <img src="books-1.jpg" alt="" id="books"  height="300" width="480"/></div>
+<!--end of contentone-->
+
+<div id="contenttwo"> 
+<h2> Log In</h2>
+<br>
+<form action="index.php" method="post">
+<div>
+<table width="400px">
+<tr>
+<td>Email:</td>
+<td><input name="email" type="text" id="email"/> </td> </tr><br>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" id="password"/> </td> </tr> </table> <br> <br>
+<input type="submit" name="submit1" value="Log In" id="submit"/>
+</div>
+</form>
+<!--form for login-->
+
+<?php
+
+//form data
+
+if(isset($_POST['submit1']))
+{
+$email=$_POST['email'];
+$password=$_POST['password'];
+
+session_start();
+
+if($email && $password)
+{
+	$connect=mysql_connect("localhost","book_admin","r2ux4dwnE4GTfRUn") or die("Couldn't connect!");
+	mysql_select_db("bookusers") or die("Couldn't connect to db");
+
+	$query=mysql_query("SELECT * from users WHERE email='$email'");
+	$numrows=mysql_num_rows($query);
+
+	if($numrows!=0)
+		{ 
+		while($row=mysql_fetch_assoc($query))
+			{
+			$dbemail=$row['email'];
+			$dbpassword=$row['password'];
+			$dbusername=$row['username'];
+			}
+		if($email==$dbemail && md5($password)==$dbpassword)
+			{
+				$_SESSION['username']=$dbusername;
+				$_SESSION['email']=$dbemail;
+				
+				
+				
+				
+				header("location: home.php"); 		
+			}	
+		else
+		echo "Incorrect password.";
+
+		}
+	else
+	echo "Wrong email.";
+
+}
+else
+echo("Please enter email and password");
+}
+
+?>
+<!--php code for login-->
+<br> 
+<hr>
+
+
+
+<p><h2>New member? Sign Up now!</h2></p>
+<form action="index.php" method="post">
+<div>
+<table width="400px">
+<tr>
+<td>Username: </td>
+<td><input type="text" name="name" id="name"/> </td> </tr><br>
+<tr>
+<td>Email:</td>
+ <td><input name="email" type="text" id="email"/></td> </tr>
+  <br>
+  <tr>
+<td>Address: </td>
+<td><input type="text" name="address" id="address"/> </td> </tr>
+<tr>
+<td>Contact Number: </td>
+<td><input type="tel" name="contact" id="contact"/> </td> </tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" id="password"/> </td> </tr>
+<tr>
+<td>Confirm Password: </td>
+<td><input type="password" name="Cpassword" id="Cpassword"/> </td> </tr>
+ </table><br> 
+<input type="submit" name="submit2" value="Sign Up" id="submit"/>
+</div>
+
+</form>
+<!--form for signup-->
+
+<?php
+
+if(isset($_POST['submit2']))
+{
+	//form data
+$name=strip_tags($_POST['name']);
+$email=strip_tags($_POST['email']);
+$address=strip_tags($_POST['address']);
+$contact=strip_tags($_POST['contact']);
+$password= strip_tags(($_POST['password']));
+$Cpassword= strip_tags(($_POST['Cpassword']));
+$date=date("Y-m-d");
+
+$connect=mysql_connect("localhost","book_admin","r2ux4dwnE4GTfRUn") or die("Couldn't connect!");
+mysql_select_db("bookusers") or die("Couldn't connect to db");
+
+$namecheck=mysql_query("SELECT username from users WHERE username='$name'");
+$countn=mysql_num_rows($namecheck);
+	
+	if($countn!=0)
+	{
+	die("That username is already taken. Use unique username.");
+	}
+	
+$emailcheck=mysql_query("SELECT email from users WHERE email='$email'");
+$count=mysql_num_rows($emailcheck);
+
+if($count!=0)
+{
+	die("That email is already taken. Use another email.");	
+}
+
+
+	//check for existence
+	if($name&&$email&&$password&&$Cpassword&&$address&&$contact)
+	{ 
+		if($password!=$Cpassword)
+		{
+			die("The passwords do not match.");
+		}
+		if(strlen($name)>25)
+		{
+			die("The name length is too long.");
+		}
+		if(strlen($password)>25||strlen($password)<5)
+		{
+		echo "Password must be between 5 to 25 characters.";
+		}
+		
+		else //register the user
+		{
+		// encrypt password
+		$password=md5($password);
+				
+		//open database
+		$connect=mysql_connect("localhost","book_admin","r2ux4dwnE4GTfRUn") or die("Couldn't connect!");
+		mysql_select_db("bookusers") or die("Couldn't connect to db");	
+		
+		$query=mysql_query("INSERT into users VALUES('','$name','$email','$address','$contact','$password','$date')");
+		
+		echo "You have been registered!! Now you can log in!!";
+		
+				$connect2=mysql_connect("localhost","book_admin","r2ux4dwnE4GTfRUn") or die("Couldn't connect!");
+				mysql_select_db("cart") or die("Couldn't connect to db");
+			
+				$sql = mysql_query("CREATE TABLE $name (
+				id_product INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+				bookname VARCHAR(100) NOT NULL,
+				authorname VARCHAR(100) NOT NULL,
+				price decimal (6,2)
+				)");
+				
+				$connect2=mysql_connect("localhost","book_admin","r2ux4dwnE4GTfRUn") or die("Couldn't connect!");
+				mysql_select_db("checkoutdb") or die("Couldn't connect to db");
+			
+				$sql = mysql_query("CREATE TABLE $name (
+				bookname VARCHAR(100) NOT NULL,
+				authorname VARCHAR(100) NOT NULL,
+				price decimal (6,2)
+				)");
+		
+		}
+		
+	}
+	else
+	echo "Please fill out all the fields.";
+}
+
+?>
+<!--php code for signup-->
+
+
+
+</div><!--end of contenttwo-->
+</div><!--end of inner main-->
+</div> <!--end of main-->
+
+<footer>
+  <nav id="bottomNAV"></nav><!--end of bottomNAV-->
+</footer>
+</div> <!--end of container-->
+
+
+
+
+
+
+</body>
+</html>

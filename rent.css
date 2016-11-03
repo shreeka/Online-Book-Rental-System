@@ -1,0 +1,135 @@
+@charset "utf-8";
+@charset "utf-8";
+/* CSS Document */
+
+@import url("webfonts/Raleway_Regular/stylesheet.css");
+@import url("webfonts/Slabo27px_Regular/stylesheet.css");
+@import url("webfonts/Raleway_Bold/stylesheet.css");
+@import url("webfonts/Pacifico/stylesheet.css");
+@import url("webfonts/PatrickHand_Regular/stylesheet.css");
+
+
+.form-text{
+    padding:15px 0;
+}
+#container {
+	width: 1024px;
+	height: 1500px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: left;
+	margin-left: 100px;
+}
+#submit {
+	width: 80px;
+	height: 30px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-family: "Raleway Bold";
+	}
+	
+header {
+	width: 1024px;
+	height: 125px;
+	background-color: #E1D7D4;
+	/* [disabled]color: #FFF6F6; */
+	-webkit-box-shadow: 0px 0px 90px;
+	box-shadow: 0px 0px 90px;
+}
+
+
+#main {
+	width: 1024px;
+	height: 800px;
+}
+
+#main table { 
+            width: 600px; 
+			font-family: "PatrickHand Regular";
+	color: #874748;
+	font-size: large;
+        } 
+          
+            #main table th {
+	padding: 10px;
+	text-align: left;
+	background-color: #664430;
+	color:#F1F0F0	
+            } 
+              
+            #main table td { 
+                padding: 5px; 
+            } 
+              
+            #main table tr { 
+                background-color: #d3dcf2; 
+            } 
+
+#titlebar {
+	height: 90px;
+	width: 1024px;
+	background-color: ;
+	font-family: "Raleway Regular";
+}
+footer {
+	width: 1024px;
+	height: 300px;
+	font-family: "Raleway Bold";
+	font-weight: bolder;
+	text-align: center;
+}h1 {
+	text-align: center;
+	font-size: 4em;
+	color: #874748;
+	font-family: "Slabo27px Regular";
+}
+#innermain {
+	width: 1024px;
+	height: 800px;
+	border-radius: 25px;
+	background-color: #E1D7D4;
+	color:#874748;
+	font-family: "Raleway Bold";
+	font-size:20px;
+
+	
+}
+#submit {
+	width: 80px;
+	height: 30px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-family: "Raleway Regular";
+}
+body {
+	background-image: url("17845-paper-butterflies-out-of-a-book-1280x800-digital-art-wallpaper (1).jpg");
+	color: #F9F4F4;
+	font-family: "Raleway Bold";
+	background-size: cover;
+}
+
+#foot {
+	font-family: "Raleway Bold";
+	text-align: center;
+	font-variant: normal;
+	font-size: xx-large;
+}
+#top {
+	float: right;
+	color: #000000;
+	font-family: Pacifico;
+	margin-right: 80px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-size: x-large;
+}
+#table1 {
+	font-family: "PatrickHand Regular";
+	color: #874748;
+	font-size: large;
+}
+

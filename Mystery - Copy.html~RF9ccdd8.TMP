@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MYSTERY and THRILLER</title>
+<style type="text/css">
+@import url("webfonts/Raleway_Regular/stylesheet.css");
+@import url("webfonts/Slabo27px_Regular/stylesheet.css");
+
+
+body {
+	background-image: url("bookstore/17845-paper-butterflies-out-of-a-book-1280x800-digital-art-wallpaper (1).jpg");
+	background-repeat: repeat;
+}
+#container {
+	width: 1024px;
+	height: 800px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: left;
+	margin-left: 100px;
+}
+header {
+	width: 1024px;
+	height: 125px;
+	background-color: #E1D7D4;
+	/* [disabled]color: #FFF6F6; */
+	-webkit-box-shadow: 0px 0px 90px;
+	box-shadow: 0px 0px 90px;
+}
+#main {
+	width: 1024px;
+	height: 600px;
+	font-family: "Raleway Regular";	
+}
+#innermain1 {
+	width: 1024px;
+	height: 300px;
+	background-color: #E1D7D4;
+	text-align: center;
+}
+#main #contentone {
+	width: 512px;
+	height: 300px;
+	float: left;
+	color: #874748;
+}
+#main #contenttwo {
+	width: 512px;
+	height: 300px;
+	float: right;
+	color: #874748;
+	
+}
+#innermain2 {
+	width: 1024px;
+	height: 350px;
+	background-color: #E1D7D4;
+	text-align: center;
+}
+#main #contentthree {
+	width: 512px;
+	height: 300px;
+	float: left;
+	color: #874748;
+}
+#main #contentfour {
+	width: 512px;
+	height: 300px;
+	float: right;
+	color: #874748;
+	
+}
+#titlebar {
+	height: 90px;
+	width: 1024px;
+	background-color: ;
+	font-family: "Raleway Regular";
+}
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+	color: #874748;
+	font-family: "Slabo27px Regular";	
+}
+
+#submit {
+	width: 80px;
+	height: 20px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-family: "Raleway Regular";
+}
+footer {
+	width: 1024px;
+	height: 100px;
+}
+
+</style>
+<link href="bookstore/webfonts/Raleway_Bold/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+<div id="container">
+<header>
+  <h1>Online Book Rental System</h1>
+  <p>&nbsp;</p>
+</header>
+<div id="titlebar">
+<nav>
+  <div align="center">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">rent books</a>
+        <ul>
+          <li><a href="#">rental queue</a></li>
+          <li><a href="#">rent date</a></li>
+          <li><a href="#">return rented books</a>
+            
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">shopping cart</a>
+        <ul>
+          <li><a href="#">list of book</a></li>
+          <li><a href="#">total ammount</a></li>
+        </ul>
+      </li>
+      <li><a href="#">search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<link rel="stylesheet" type="text/css" href="bookstore/practice.css" media="screen" />
+
+
+
+</div><!-- end titlebar-->
+<div id="main">
+<p style="text-align: center; font-family: 'Raleway Bold'; color: #FCF7F7;"> MYSTERY and THRILLER</p>
+<div id="innermain1">
+<div id="contentone">
+<p>
+<img src="mrMercedes.jpg" width="221" height="191"></p>
+By Stephen King<br>
+<input type="submit" id="submit" value="Add to cart"/> <br>
+<input type="submit" id="submit" value="Rent"/>
+ <br>
+
+ </div>
+<!--end of contentone-->
+
+<div id="contenttwo"> <p> <img src="gonegirl.jpg" width="221" height="191"></p>
+By Gillian Flynn<br>
+<input type="submit" id="submit" value="Add to cart"/> <br>
+<input type="submit" id="submit" value="Rent"/>
+ <br></div><!--end of contenttwo-->
+</div><!--end of inner main1-->
+<div id="innermain2">
+<div id="contentthree"> 
+<p>
+<img src="girlontrain.jpg" width="221" height="191"></p>
+By Paula Hawkins<br>
+<input type="submit" id="submit" value="Add to cart"/> <br>
+<input type="submit" id="submit" value="Rent"/></div>
+<!--end of contentthree-->
+
+<div id="contentfour"> 
+<p>
+<img src="wewereliars.jpg" width="221" height="191"></p>
+By E. Lockhart <br>
+<input type="submit" id="submit" value="Add to cart"/> <br>
+<input type="submit" id="submit" value="Rent"/>
+</div><!--end of contentfour-->
+</div><!--end of innermain2-->
+</div><!--end of main-->
+</div><!--end of container-->
+
+<footer>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+</head>
+
+
+<body>
+<img src="keclogo.PNG" width="100" height="100"/><br>The first ISO: 9001:2008 certified college in Nepal. 
+<strong> <font size="+3"> <center> Kathmandu Engineering College </center> </h1> </font></strong>
+<center> Kalimati, Kathmandu <br> Tel: 01-4273130 <br> 
+url: <a href="www.keckist.edu.np"> www.keckist.edu.np </a> </center> 
+
+
+<p align="right"><img src="fault.png" width="200" height="200"/><br>
+<button name="uploadbttn"> Upload your photo </button> </p>
+<br> <br> <br>
+<form action="lab1.html" method="post">
+<table align="center">
+<tr>
+<td> Name*:</td>
+<td> <input type="text" name="fname" placeholder="First Name" required/>
+<input type="text" name="lname" placeholder="Last Name" required/> </td>
+</tr>
+<tr>
+<td> Password*: </td>
+<td> <input type="password" name="password" id="password" pattern="(?=.*\d).{8,}" title="Password must be of 8 or more characters and must include at least one number." required/> </td>
+</tr>
+<tr>
+<td> Email*: </td>
+<td> <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Email must be in following order: characters@characters.domain" required/> </td>
+</tr>
+<tr>
+<td> Sex: </td>
+<td> Male <input type="checkbox" name="malecb"/>
+Female <input type="checkbox" name="femalecb"/>
+</td>
+</tr>
+<tr>
+<td> Education: </td>
+<td> SLC <input type="checkbox" name="slccb"/>
++2 <input type="checkbox" name="+2cb"/>
+Bachelors <input type="checkbox" name="bachcb"/>
+Masters <input type="checkbox" name="mastercb"/>
+</td>
+</tr>
+<tr>
+<td> Interested courses: </td>
+<td> <input type="checkbox" name="javacb"/>Java 
+ <input type="checkbox" name="xmlcb"/>XML
+ <input type="checkbox" name="androidcb"/>Android 
+ <input type="checkbox" name="javascriptcb"/> Javascript </td>
+</tr>
+
+
+<tr>
+<td> <input type="submit" name="submit" value="Submit"/>
+ <input type="reset" name="reset" value="Reset"/> </td>
+
+
+</tr>
+</table>
+</form>
+
+<p align="center">
+<br> 
+</p>
+</body>
+</html>
+
+

@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import url("webfonts/Raleway_Regular/stylesheet.css");
+@import url("webfonts/Slabo27px_Regular/stylesheet.css");
+
+
+body {
+	background-image: url("17845-paper-butterflies-out-of-a-book-1280x800-digital-art-wallpaper (1).jpg");
+	background-size: cover;
+}
+#container {
+	width: 1024px;
+	height: 1000px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: left;
+	margin-left: 100px;
+}
+header {
+	width: 1024px;
+	height: 125px;
+	background-color: #E1D7D4;
+	/* [disabled]color: #FFF6F6; */
+	-webkit-box-shadow: 0px 0px 90px;
+	box-shadow: 0px 0px 90px;
+}
+#main {
+	width: 1024px;
+	height: 600px;
+	font-family: "Raleway Regular";	
+}
+#innermain1 {
+	width: 1024px;
+	height: 300px;
+	background-color: #E1D7D4;
+	text-align: center;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+#main #contentone {
+	width: 512px;
+	height: 300px;
+	float: left;
+	color: #874748;
+}
+#main #contenttwo {
+	width: 512px;
+	height: 300px;
+	float: right;
+	color: #874748;
+	
+}
+#innermain2 {
+	width: 1024px;
+	height: 350px;
+	background-color: #E1D7D4;
+	text-align: center;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+#main #contentthree {
+	width: 512px;
+	height: 300px;
+	float: left;
+	color: #874748;
+}
+#main #contentfour {
+	width: 512px;
+	height: 300px;
+	float: right;
+	color: #874748;
+	
+}
+#titlebar {
+	height: 90px;
+	width: 1024px;
+	background-color: ;
+	font-family: "Raleway Regular";
+}
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+	color: #874748;
+	font-family: "Slabo27px Regular";	
+}
+
+#submit {
+	width: 80px;
+	height: 20px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	font-family: "Raleway Regular";
+}
+footer {
+	width: 1024px;
+	height: 100px;
+}
+
+

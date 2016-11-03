@@ -1,0 +1,4 @@
+name:bookusers
+user name:book_admin
+host:localhost
+password:r2ux4dwnE4GTfRUn
